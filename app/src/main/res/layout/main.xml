@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="match_parent"
+	android:layout_width="match_parent"
+	android:background="#ffffff"
+	>
+
+	<!--<HorizontalScrollView-->
+	<!--android:layout_height="wrap_content"-->
+	<!--android:layout_width="match_parent"-->
+	<!--android:id="@+id/layout5HorizontalScrollView1"-->
+	<!-->-->
+	<!--</HorizontalScrollView>-->
+
+	<LinearLayout
+		android:layout_height="45dp"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:gravity="center_vertical"
+		android:id="@+id/layoutBrushProps"
+		>
+
+		<Button
+			android:text="Gallery"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_marginLeft="20dp"
+			android:id="@+id/galleryButton"
+			android:alpha="0.7"
+			/>
+
+		<Button
+			android:text="Save Canvas"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:id="@+id/saveCanvasButton"
+			android:alpha="0.7"
+			/>
+
+		<Button
+			android:text="Clear Canvas"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:id="@+id/clearCanvasButton"
+			android:alpha="0.7"
+			/>
+
+		<Button
+			android:text="Undo"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:id="@+id/undoCanvasButton"
+			android:alpha="0.7"
+			/>
+
+		<Button
+			android:text="Redo"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:id="@+id/redoCanvasButton"
+			android:alpha="0.7"
+			/>
+
+		<LinearLayout
+			android:layout_height="match_parent"
+			android:layout_width="wrap_content"
+			android:layout_marginLeft="130dp"
+			android:orientation="horizontal"
+			android:layout_gravity="right|center_vertical"
+			android:gravity="right|center_vertical"
+			android:id="@+id/layoutCanvasSpinners"
+			>
+
+			<TextView
+				android:text="Brush Selected:"
+				android:layout_height="match_parent"
+				android:layout_width="wrap_content"
+				android:layout_marginLeft="10dp"
+				android:gravity="center"
+				/>
+
+			<Spinner
+				android:layout_height="match_parent"
+				android:layout_width="150dp"
+				android:background="@android:drawable/btn_dropdown"
+				android:spinnerMode="dropdown"
+				android:layout_marginLeft="10dp"
+				android:id="@+id/spinnerBrushStyle"
+				android:prompt="@string/spinner_brush"
+				/>
+
+			<TextView
+				android:text="Color Control:"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_marginLeft="10dp"
+				/>
+
+			<CheckBox
+				android:text="Normal"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_marginLeft="10dp"
+				android:id="@+id/normalBrushCheckBox"
+				/>
+
+			<CheckBox
+				android:text="Negative"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_marginLeft="10dp"
+				android:id="@+id/negativeBrushCheckBox"
+				/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="45dp"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:gravity="right|center_vertical"
+		android:layout_below="@id/layoutBrushProps"
+		android:id="@+id/layoutBrushActions"
+		>
+
+		<TextView
+			android:text="Opacity:"
+			android:layout_height="match_parent"
+			android:layout_width="wrap_content"
+			android:layout_gravity="right|center_vertical"
+			android:gravity="center"
+			android:layout_marginLeft="10dp"
+			/>
+
+		<SeekBar
+			android:text="brushOpacity"
+			android:color="#ff000000"
+			android:layout_height="wrap_content"
+			android:layout_width="300dp"
+			android:layout_gravity="right|center_vertical"
+			android:id="@+id/opacitySeekBar"
+			android:progress="50"
+			/>
+
+		<TextView
+			android:text="Radius:"
+			android:layout_height="match_parent"
+			android:layout_width="wrap_content"
+			android:layout_gravity="right|center_vertical"
+			android:gravity="center"
+			android:layout_marginLeft="10dp"
+			/>
+
+		<SeekBar
+			android:text="brushRadius"
+			android:layout_height="wrap_content"
+			android:layout_width="300dp"
+			android:layout_gravity="right|center_vertical"
+			android:id="@+id/brushSizeSeekBar"
+			android:progress="20"
+			/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:layout_alignParentBottom="true"
+		android:gravity="bottom"
+		android:layout_below="@id/layoutBrushActions"
+		android:weightSum="1.0"
+		android:id="@+id/layoutImageView"
+		>
+
+		<ImageView
+			android:text="originalImageView"
+			android:src="@drawable/cv"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_weight="0.5"
+			android:scaleType="fitCenter"
+			android:adjustViewBounds="true"
+			android:id="@+id/originalImageView"
+			android:layout_gravity="center_vertical"
+			/>
+
+		<ImageView
+			android:text="alteredImageView"
+			android:src="@drawable/canvas"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_weight="0.5"
+			android:scaleType="fitCenter"
+			android:adjustViewBounds="true"
+			android:id="@+id/alteredImageView"
+			android:layout_gravity="center_vertical"
+			/>
+
+	</LinearLayout>
+
+</RelativeLayout>
+
+

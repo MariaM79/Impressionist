@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Impressionist</string>
+    <string name="spinner_brush">Brush Style</string>
+    <string name="spinner_canvas">Canvas Action</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>

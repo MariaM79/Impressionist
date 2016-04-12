@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:orientation="vertical"
+		android:background="#ff4669aa">
+		android:gravity="center">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="\n \n Image Name :"
+			android:layout_width="wrap_content"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:layout_width="wrap_content"
+			android:hint="name"
+			android:id="@+id/nameEditTextDialog"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="Image description :"
+			android:layout_width="wrap_content"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:layout_width="wrap_content"
+			android:hint="description"
+			android:id="@+id/descriptionEditTextDialog"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:text="save"
+			android:layout_width="wrap_content"
+			android:id="@+id/saveCanvasButtonDialog"/>
+		<TextView
+			android:layout_height="wrap_content"
+			android:text="\n \n "
+			android:layout_width="wrap_content"/>
+
+	</LinearLayout>
+
+
